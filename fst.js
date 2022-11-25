@@ -26,3 +26,9 @@ bin/xxx.exe file gene..zo
 18 个参与者
 选择 .NET 版本 。net7 6 5 ,net core3...ma net4 pa chonf l; .guji..
 本教程演示如何使用 Visual Studio Code 和 .NET CLI 创建并运行 .NET 控制台应用程序。 项目任务（例如创建、编译和运行项目）通过使用 .NET CLI 来完成。 你可以遵循本教程中的步骤使用其他代码编辑器，然后在终端中运行命令（如果你愿意）。
+
+
+
+hMailServer - Free open source email server for Microsoft …
+hMailServer is a free, open source, e-mail server for Microsoft Windows. It's used by Internet service providers, companies, governments, schools and enthusiasts in all parts of the world. It supports the common e-mail protocols (IMAP, SMTP and POP3) and can easily be integrated with many existing web mail systems. It has flexible score-based spam ...
+xmapp  mecury.. mail server 

@@ -20,7 +20,9 @@ bin/xxx.exe file gene..zo
 1、读取前，先去读Redis，如果没有数据，再读取数据库，将数据拉入Redis。
 2、插入数据时，同时写入Re
 
-作者：阿里云数据库前端团队
-链接：https://juejin.cn/post/6898136751949873165
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+教程：使用 Visual Studio Code 创建 .NET 控制台应用程序
+项目
+2022/11/17
+18 个参与者
+选择 .NET 版本 。net7 6 5 ,net core3...ma net4 pa chonf l; .guji..
+本教程演示如何使用 Visual Studio Code 和 .NET CLI 创建并运行 .NET 控制台应用程序。 项目任务（例如创建、编译和运行项目）通过使用 .NET CLI 来完成。 你可以遵循本教程中的步骤使用其他代码编辑器，然后在终端中运行命令（如果你愿意）。

@@ -32,3 +32,8 @@ bin/xxx.exe file gene..zo
 hMailServer - Free open source email server for Microsoft …
 hMailServer is a free, open source, e-mail server for Microsoft Windows. It's used by Internet service providers, companies, governments, schools and enthusiasts in all parts of the world. It supports the common e-mail protocols (IMAP, SMTP and POP3) and can easily be integrated with many existing web mail systems. It has flexible score-based spam ...
 xmapp  mecury.. mail server 
+
+
+树型结构：
+索引头
+开始ROWID，结束ROWID（先列出索引的最大范围）

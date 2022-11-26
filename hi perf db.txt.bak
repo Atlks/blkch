@@ -1,0 +1,10 @@
+
+prepost sql db ,is good ,,json supt more good...
+base uid,,fenku.....
+MariaDB 
+mongodb..... big data...
+
+not mysql
+
+
+MEMORY	内存不会在磁盘上写数据(所有行在崩溃时都会丢失)，最好用于只读缓存来自其他表的数据，或用于临时工作区。由于默认的XtraDB和其他存储引擎具有良好的缓存，因此对该引擎的需求比过去要少。

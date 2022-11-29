@@ -53,3 +53,12 @@ Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache
 
 3 打开浏览器，输入 localhost:8080，可以看到如下界面
 http://localhost:8080/#/topic
+
+
+
+
+三、启动
+# 启动namesvr，监听9876端口
+nohup sh bin/mqnamesrv &
+# 启动mqbroker，监听10911、10912端口
+nohup sh bin/mqbroker -n localhost:9876 -c ./conf/broker.conf autoCreateTopicEnable=true &

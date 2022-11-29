@@ -1,0 +1,14 @@
+php C:\xampp\php\composer.phar init
+
+
+
+通过composer下载扩展
+
+composer首先会生成一个composer.json的文件，并且创建vendor目录（扩展文件就是下载到这个目录的），并且同时生成composer.lock文件
+
+
+php C:\xampp\php\composer.phar require mongodb/mongodb
+must need mongdb.ext.dll
+
+
+php C:\xampp\php\composer.phar require jenssegers/mongodb --ignore-platform-reqs

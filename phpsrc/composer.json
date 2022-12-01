@@ -1,0 +1,17 @@
+{
+    "name": "tom/phpsrc",
+    "type": "n",
+    "autoload": {
+        "psr-4": {
+            "Tom\\Phpsrc\\": "src/"
+        }
+    },
+    "require": {
+        "jenssegers/mongodb": "^3.9"
+    }
+	
+	,
+	"provide" : {
+				"ext-mongo": "*"
+			}  
+}

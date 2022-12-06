@@ -12,3 +12,4 @@ gene exe 在 D:\0src\nodesrc
 node.js - 如何用pkg打包nodejs可执行文件_个人文章 - SegmentFault 思否
 
 node ver 16
+pkg的打包原理简单来说，就是将js代码以及相关的资源文件打包到可执行文件中，然后劫持fs里面的一些函数，使它能够读到可执行文件中的代码和资源文件。

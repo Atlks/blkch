@@ -4,7 +4,7 @@
 var MongoClient = require('mongodb').MongoClient;
 
 // Replace the uri string with your connection string.
-url = 'mongodb://localhost:27017/runoob';
+url = 'mongodb://localhost:27017/';
  
 MongoClient.connect(url,   (err, MongoClient_conn)=> {
     // console.log(MongoClient_conn)
@@ -12,7 +12,7 @@ MongoClient.connect(url,   (err, MongoClient_conn)=> {
     myobj = { title: 'Back to the Future' };
 
 
-    MongoClient_conn.db('db000').collection('col1_table1').insertOne(myobj,   (err, res) =>{
+    MongoClient_conn.db('db123').collection('col1_table1').insertOne(myobj,   (err, res) =>{
 
         console.log("文档插入成功");
 

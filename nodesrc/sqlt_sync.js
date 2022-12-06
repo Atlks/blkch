@@ -56,6 +56,7 @@ function run(sql, dbfile) {
 
 })();
 
+// C:\Users\tom\AppData\Roaming\npm\pkg.cmd -t win sqlt_sync.js
 
 
 

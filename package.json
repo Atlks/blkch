@@ -1,8 +1,13 @@
 {
   "dependencies": {
+    "async": "^3.2.4",
+    "aysnc": "^0.0.1-security",
     "bip39": "^3.0.4",
     "chart.js": "^4.0.1",
+    "child_process": "^1.0.2",
     "ethereum-hdwallet": "^0.1.2",
-    "sqlite3": "^5.1.2"
+    "request": "^2.88.2",
+    "sqlite3": "^5.1.2",
+    "sync-request": "^6.1.0"
   }
 }

@@ -1,0 +1,20 @@
+Dart、CoffeeScript、TypeScript 和JavaScriptDart、CoffeeScript、TypeScript 和JavaScript
+
+TypeScript与Dart之间的差异
+TypeScript是一种开放源代码编程语言，它是JavaScript的类型化超集，可编译为纯JavaScript。它由Microsoft开发和维护。由于TypeScript是JavaScript的超集，因此所有现有的JavaScript程序也是有效的TypeScript程序。TypeScript可用于开发用于客户端和服务器端执行的JavaScript应用程序。
+
+Dart是具有C样式语法的通用的，基于类的，面向对象的编程语言，用于构建Web和移动应用程序。它还可用于创建物联网（IoT）设备。它是开源的，由Google开发，后来被ECMA批准为标准。Dart支持接口，抽象类，泛型，静态类型和混合。
+
+可以将TypeScript视为用于应用程序规模开发的JavaScript。它是强类型的，面向对象的和编译的语言。TypeScript还附带了一组工具。换句话说，TypeScript是具有某些其他功能的JavaScript。它是为开发大型应用程序和将其转换为JavaScript而设计的。TypeScript编译器本身是用TypeScript编写的，然后编译为JavaScript。
+
+Dart可以选择将其编译为JavaScript。可以将Dart视为Google的JavaScript替代品。它于2011年10月发布，旨在提供与JavaScript相同的工具，仅作为强大的工具。Dart具有许多面向对象的功能，而典型的JavaScript程序员可能并不熟悉。
+
+而 dart 聚集的人气很快消散。随后的几年间，除了 google 团队内部还在坚持使用 dart 来做自己的前端应用，业界对 dart 的使用少得可怜。与此同时，作为 javascript 超集的 TypeScript 因为其对 javascript 生态系统的友好和强大灵活的类型系统得以不断积聚人气，渐渐成为 javascript 生态圈里大家首选的「编译成 js」的语言。一退一进之间，前端圈似乎在宣布着 dart 的死刑。
+
+
+如果按照预期，js早晚会完全进化到ECMAScript 6上，如此的话使用TypeScript就会就有先天的优势。从原理上讲，CoffeeScript和TypeScript属于一类，只不过CoffeeScript更多的偏向于Ruby的开发者，而TypeScript更偏向于C#的开发者，好消息是，TypeScript完全兼容ECMAScript 6，这也是Anders Hejlsberg大叔更牛掰的地方。
+
+作者：卢融凯
+链接：https://www.zhihu.com/question/20833518/answer/19159286
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

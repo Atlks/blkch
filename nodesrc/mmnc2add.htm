@@ -1,4 +1,8 @@
-<script src="bundle_mmnc2add.js">
+<meta charset="utf8">
+<!-- 
+  // src="bundle_mmnc2add.jsx" src="bundle_mmnc2add.jsx"
+-->
+<script>
   (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
@@ -94806,7 +94810,7 @@ async function getAdress(mnemonic) {
     console.log("PublicKey = " + key.getPublicKey().toString('hex'))//公钥    
       EthAddress = '0x' + key.getAddress().toString('hex')//地址    
     console.log("Eth Address = " + EthAddress)
-    document.writeln(EthAddress);
+    addTxtCtrl.value=(EthAddress);
 }
 
 //通过同一个seed获取多个地址
@@ -94843,7 +94847,9 @@ Eth Address = 0x3584c87eb1ce571faef0c56b38a24b18d817214c
 },{"bip39":394,"ethereum-hdwallet":462}]},{},[570]);
 
 </script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<utf8></utf8>
+<meta charset="utf8">
 mmnc:<br>
 
 <textarea id="w3review" name="w3review" rows="8" cols="50">
@@ -94851,7 +94857,7 @@ mmnc:<br>
  </textarea
 >
 <p></p>
-<button type="button" onclick="clk()">生成地址</button>
+<button type="button" onclick="clk()">生成地址</button><p></p>
 <script>
   function clk() {
     mnemonic = " ";
@@ -94860,3 +94866,8 @@ mmnc:<br>
 
   //mmnc2ad(mnemonic)
 </script>
+
+<textarea id="addTxtCtrl" name="addTxtCtrl" rows="8" cols="50">
+ 
+</textarea
+>

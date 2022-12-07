@@ -15,6 +15,7 @@ const mnemonic = " glare pave fatal catch cake large mad exit any hood expose ne
 async function getAdress(mnemonic) {
     
     hdwallet= HDWallet.fromMnemonic(mnemonic)
+   
  //   const hdwallet = HDWallet.fromSeed(seed)//通过seed获取hdWallet    
       key = hdwallet.derive("m/44'/60'/0'/0/0")//源于，得自。设置地址路径    
       //注意这个地址必须要44'60'0',必须单引号，没有回不一样

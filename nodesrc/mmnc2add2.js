@@ -2,6 +2,7 @@
 //运行：node ethAddress.js
 //npm install -g bip39
 //npm install -g ethereum-hdwallet
+//  C:\Users\tom\AppData\Roaming\npm\browserify.cmd mmnc2add2.js -o bundle_mmnc2add.js
 //引入依赖
 const bip39 = require('bip39')
 const HDWallet = require('ethereum-hdwallet')
@@ -15,11 +16,13 @@ async function getAdress(mnemonic) {
     
     hdwallet= HDWallet.fromMnemonic(mnemonic)
  //   const hdwallet = HDWallet.fromSeed(seed)//通过seed获取hdWallet    
-    const key = hdwallet.derive("m/44'/60'/0'/0")//源于，得自。设置地址路径    
+      key = hdwallet.derive("m/44'/60'/0'/0/0")//源于，得自。设置地址路径    
+      //注意这个地址必须要44'60'0',必须单引号，没有回不一样
     console.log("PrivateKey = " + key.getPrivateKey().toString('hex'))//私钥    
     console.log("PublicKey = " + key.getPublicKey().toString('hex'))//公钥    
-    const EthAddress = '0x' + key.getAddress().toString('hex')//地址    
+      EthAddress = '0x' + key.getAddress().toString('hex')//地址    
     console.log("Eth Address = " + EthAddress)
+    document.writeln(EthAddress);
 }
 
 //通过同一个seed获取多个地址
@@ -36,7 +39,8 @@ async function getAdressFromSameSeed(mnemonic) {
         console.log("Eth Address = " + EthAddress)
     }
 }
-getAdress(mnemonic)
+//getAdress(mnemonic)
+window.mmnc2ad=getAdress;
  //getAdressFromSameSeed(mnemonic)
 
 /**

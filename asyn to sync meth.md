@@ -1,5 +1,14 @@
 asyn to sync meth
 
+<!-- TOC -->
+
+- [use sync library](#use-sync-library)
+- [Node.js 内置的 util.Promise 包装法](#nodejs-内置的-utilpromise-包装法)
+  - [await wrap](#await-wrap)
+  - [async lib bhaoyon](#async-lib-bhaoyon)
+
+<!-- /TOC -->
+
 # use sync library
 request = require('sync-request'); 
 async = require('async');
@@ -10,6 +19,10 @@ url = "http://localhost:5000/friendGroup/add?access_token=tk888&groupName=grp999
 console.log(url) 
 res = request('get', url,{});
 console.log( (res.getBody('utf8')));
+
+# Node.js 内置的 util.Promise 包装法
+
+Node.js 内置的 util 模块有一个 promisify() 方法，该方法将基于回调的函数转换为基于 Promise 的函数。这使您可以将 Promise 链和 async/await 与基于回调的 API 结合使用。
 
 ## await wrap
 

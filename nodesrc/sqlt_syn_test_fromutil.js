@@ -1,30 +1,24 @@
+// nodejs sqlite bpx 最佳实践
 const sqlite3 = require("sqlite3");
 const util = require("util");
+var mod1 = require("./atisdk/sqltUtil");
 
-
-const dbfile = "user_1923_dbf.db";
+const dbfile = "user_19255691_dbf.db";
 db = new sqlite3.Database(dbfile);
 db.run = util.promisify(db.run);
 db.all = util.promisify(db.all);
 
-
 (async () => {
   //---------create table
 
-  try {
-    await db.run("create table  userinfo(c JSON)");
-  }catch(err) {
-    console.log(err);
-  }
-  console.log("after crt tabl");
+  await mod1.run("create table  userinfo(c JSON)", dbfile);
+ 
 
   // --------- insert dt
-
-  // 2014年6月18日 上午10:33:24
   o = { dt: 2022, evt: "meet ", time: new Date().toLocaleTimeString() };
   sql = " insert into userinfo values('" + JSON.stringify(o) + "') ";
   await db.run(sql);
-  console.log("after inst dt");
+  console.log("   >>>>"+sql);
 
   //----search query
   sql = "SELECT json_extract(c,'$.time') as c1 FROM userinfo;";

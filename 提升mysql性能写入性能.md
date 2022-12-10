@@ -13,6 +13,8 @@
   - [写点sql代码的](#写点sql代码的)
 - [最后方案 mongodb mq](#最后方案-mongodb-mq)
 - [HandlerSocket直接读写socket接口 nosql](#handlersocket直接读写socket接口-nosql)
+- [canshu](#canshu)
+  - [innodb\_flush\_log\_at\_trx\_commit提升20倍](#innodb_flush_log_at_trx_commit提升20倍)
 
 <!-- /TOC -->
 # 性能更高pgsql mariadb
@@ -75,3 +77,55 @@ HandlerSocket是MariaDB的NoSQL插件。它作为 mysqld 进程内的守护进�
 为了降低 CPU 使用率，它不会解析 SQL。
 接下来，它会在可能的情况下批处理请求，从而进一步降低 CPU 使用率并降低磁盘使用率。
 最后，与mysql / libmysql相比，客户端/服务器协议非常紧凑，从而减少了网络使用量。
+
+
+# canshu
+
+##  innodb_flush_log_at_trx_commit提升20倍
+
+但是这种情况下，会导致频繁的io操作，因此该模式也是最慢的一种方式。
+
+当innodb_flush_log_at_trx_commit设置为0，mysqld进程的崩溃会导致上一秒钟所有事务数据的丢失。
+当innodb_flush_log_at_trx_commit设置为2，只有在操作系统崩溃或者系统掉电的情况下，上一秒钟所有事务数据才可能丢失。
+针对同一个表通过c#代码按照系统业务流程进行批量插入，性能比较如下所示：
+
+（a.相同条件下：innodb_flush_log_at_trx_commit=0，插入50W行数据所花时间25.08秒;
+（b.相同条件下：innodb_flush_log_at_trx_commit=1，插入50W行数据所花时间17分21.91秒;
+（c.相同条件下：innodb_flush_log_at_trx_commit=2，插入50W行数据所花时间1分0.35秒。
+————————————————
+2核4G这么低的硬件配置，由于参数设置的合理性，已经能抗住每秒数千次，每分钟8万多次的读写请求了。
+
+而假如在写入数据量远大于读的场景，或者说方便随便改动参数的场景，可以针对大批量的数据导入，再做调整，把log_file_size调整的更大，可以达到innodb_buffer_pool_size的25%~100%。
+
+（6) innodb_buffer_pool_size设置MySQL Innodb的可用缓存大小。理论上最大可以设置为服务器总内存的80%.
+
+设置越大的值，当然比设置小的值的写入性能更好。比如上面的参数innodb_log_file_size就是参考innodb_buffer_pool_size的大小来设置的。
+
+（7) innodb_thread_concurrency=16
+
+故名思意，控制并发线程数，理论上线程数越多当然会写入越快。当然也不能设置过大官方建议是CPU核数的两倍左右最合适。
+
+（
+————————————————
+9) innodb_buffer_pool_instance
+
+默认为1，主要设置内存缓冲池的个数，简单一点来说，是控制并发读写innodb_buffer_pool的个数。
+
+在大批量写入的场景，同样可以调大该参数，也会带来显著的性能提升。
+
+（10) bin_log
+
+二进制日志，通常会记录数据库的所有增删改操作。然而在大量导数据，比如数据库还原的时候不妨临时关闭bin_log,关掉对二进制日志的写入，让数据只写入数据文件，迅速完成数据恢复，完了再开启
+————————————————
+2、减少磁盘IO，提高磁盘读写效率
+
+分表
+
+（2)：硬件优化
+
+a: 在资源有限的情况下，安装部署的时候，操作系统中应有多个磁盘，把应用程序，数据库文件，日志文件等分散到不同的磁盘存储，减轻每个磁盘的IO，从而提升单个磁盘的写入性能。
+
+b：采用固态硬盘SSD
+
+如果资源足够可以采用SSD存储，SSD具有高速写入的特性，同样也能显著提升所有的磁盘IO操作。
+ 

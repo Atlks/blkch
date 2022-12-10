@@ -11,7 +11,7 @@
 - [性能更高pgsql mariadb](#性能更高pgsql-mariadb)
   - [不用改动代码的 只配参数](#不用改动代码的-只配参数)
   - [写点sql代码的](#写点sql代码的)
-- [最后方案mq](#最后方案mq)
+- [最后方案 mongodb mq](#最后方案-mongodb-mq)
 - [HandlerSocket直接读写socket接口 nosql](#handlersocket直接读写socket接口-nosql)
 
 <!-- /TOC -->
@@ -59,8 +59,11 @@ innodb_flush_method=O_DIRECT
 先insert到内存表，然后timer同步到实际表
 事务隔离级别使用更简单的。
 
-# 最后方案mq
-mq比较厉害，单改代码比较大。
+# 最后方案 mongodb mq
+写入mongodb ，同步到db。。
+代码改为去join单表模式
+最后直接读取mgdb即可。。。
+ 比较厉害，单改代码比较大。
 
 # HandlerSocket直接读写socket接口 nosql
 用 HandlerSocket 跳过 MYSQL 的 SQL 解析层，MYSQL 就真正变成了 NOSQL。

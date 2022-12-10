@@ -1,6 +1,18 @@
 虚拟化技术  vm虚拟机
 
+<!-- TOC -->
 
+- [svm pvm](#svm-pvm)
+  - [系统虚拟机-system virtual machines，](#系统虚拟机-system-virtual-machines)
+  - [进程虚拟机process virtual machines](#进程虚拟机process-virtual-machines)
+- [jvm](#jvm)
+- [DB是个虚拟机啊](#db是个虚拟机啊)
+
+<!-- /TOC -->
+
+# svm pvm
+## 系统虚拟机-system virtual machines，
+## 进程虚拟机process virtual machines
 虚拟机的话，在wikipedia上定义分为两种，系统虚拟机-system virtual machines，进程虚拟机process virtual machines；另外还有一个非虚拟机类型的虚拟化技术：操作系统层次虚拟化技术operation system level virtualization；
 
 系统虚拟机-system vm，为操作系统的安装运行提供虚拟环境，它模拟提供了硬件操作环境。例如他模型出一套个人电脑的硬件环境，在这个硬件环境下，我们可以安装各种操作系统win7/win10/centos/ubuntu等，然后进入安装的操作系统中，使用操作系统。
@@ -14,3 +26,7 @@
 虚拟机
 cpu 内存 io磁盘 console(screen)
 network api
+
+# jvm  
+# DB是个虚拟机啊
+，DB层能解决的事情应用层就不要做了啊，存储分区后性能提升啊

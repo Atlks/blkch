@@ -17,3 +17,14 @@ nodemon app.js
 # sqlt lib not spt awt..only can uti.proms to convt..
 
 # mlt process lib
+
+
+# 7. lodash util lib
+ 
+
+
+
+
+
+
+Lodash 减少数组、数字、对象、字符串等工作的麻烦，它让 JS 变得更容易。

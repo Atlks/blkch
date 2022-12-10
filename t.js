@@ -3,7 +3,13 @@ request = require('sync-request');
 async = require('async');
 task=[];
 
-
+url = "http://localhost:5000/friendGroup/add?access_token=tk888&groupName=grp13478&salt=1669893571254&secret=xxUYkpr"
+console.log(url) 
+res = request('get', url,{});
+console.log( (res.getBody('utf8')));
+ 
+console.log(1111111111111111111111)
+throw 111;
 
 url="http://localhost:5000/friendGroup/updateGroupUserList?access_token=tk888&groupId=g155&userIdListStr=10000032%2c10000033&salt=1669893579434&secret=Y9ryiOppTWHcQpRvSI4m1w%3d%3d"
 console.log(url) 
@@ -11,16 +17,11 @@ res = request('get', url,{});
 console.log( (res.getBody('utf8')));
 
 
-throw 111
-
-
-
-url = "http://localhost:5000/friendGroup/add?access_token=tk888&groupName=grp1347&salt=1669893571254&secret=xxUYkpr"
-console.log(url) 
-res = request('get', url,{});
-console.log( (res.getBody('utf8')));
  
-console.log(1111111111111111111111)
+
+
+
+
 
 
 

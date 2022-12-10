@@ -3,7 +3,7 @@ request = require('sync-request');
 async = require('async');
 task=[];
 
-url = "http://localhost:5000/friendGroup/add?access_token=tk888&groupName=grp13478&salt=1669893571254&secret=xxUYkpr"
+url = "http://localhost:5000/friendGroup/add?access_token=tk888&groupName=grp134786&salt=1669893571254&secret=xxUYkpr"
 console.log(url) 
 res = request('get', url,{});
 console.log( (res.getBody('utf8')));

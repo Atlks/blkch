@@ -28,3 +28,6 @@ nodemon app.js
 
 
 Lodash 减少数组、数字、对象、字符串等工作的麻烦，它让 JS 变得更容易。
+
+# common db api ..orm API
+Sequelize是一个易于使用和基于承诺的Node.js ORM工具，适用于Postgres，MySQL，MariaDB，SQLite，DB2，Microsoft SQL Server和Snowflake。它具有可靠的事务支持、关系、急切和延迟加载、读取复制等功能。

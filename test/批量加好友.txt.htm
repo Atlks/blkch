@@ -1,0 +1,101 @@
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"
+  integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
+
+
+
+<button
+  id="btnBtaddFrd"
+  class="layui-btn layui-btn-sm befriends"
+  onclick="queryFrd()"
+>
+  批量加好友
+</button>
+
+<select
+  class="js-example-basic-multiple"
+  name="statesx"
+  multiple="multiple"
+  id="frdx"
+  style="width: 300px"
+>
+  <option value="AL">Alabama</option>
+  ...
+  <option value="WY">Wyoming</option>
+</select>
+<script>
+  function formatState(obj) {
+    //  it convt option to obj...so must opt.text prop
+
+    return $('<span><i class="fa-solid fa-user"></i>' + obj.text + "</span>");
+  }
+
+  function queryFrd() {
+    $.get("http://localhost:8092//queryFrd", function (data, status) {
+      console.log("Data: " + data + "\nStatus: " + status);
+      $.each(data, function (idx, obj) {
+        //  SON.parse
+        // alert(obj.tagNmae);
+        $("#frdx").append(
+          "<option value=" + obj._id + ">" + obj.nickname + "</option>"
+        );
+      });
+      // //each
+      //cfg  theme: 'bootstrap4' 
+      setTimeout(function () {
+        $(".js-example-basic-multiple").select2({
+          templateResult: formatState,
+          closeOnSelect: false, 
+        });
+      }, 10);
+
+      // $(".js-example-templating").select2();
+    }); //get
+    // http://localhost:8092//queryFrd
+  }
+
+  $(document).ready(function () {
+    queryFrd();
+  });
+</script>
+
+<!--
+			
+			-->
+
+			<button onclick="getFrdList()">确定</button>
+			<Script type="text/javascript">
+function getFrdList()
+{
+
+	var arr133=[];
+	var lst=$('#frdx').select2('data');
+	for(var itm of lst)
+	{
+         console.log(itm.id)
+		 arr133.push(itm.id)
+	}
+	 
+	console.log(arr133.join(","))
+//	alert(frdx.value)
+}
+
+			</Script>
+

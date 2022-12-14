@@ -8,11 +8,24 @@ java lib
   - [str增强库  apache guava](#str增强库--apache-guava)
   - [集合增强库](#集合增强库)
   - [sql解析库](#sql解析库)
+  - [async library](#async-library)
+- [ui](#ui)
+  - [jQuery](#jquery)
+  - [select2  mlt slt](#select2--mlt-slt)
+  - [table lst jq](#table-lst-jq)
 - [功能类](#功能类)
   - [http web](#http-web)
+  - [form mlt filr](#form-mlt-filr)
   - [音视频ffmpeg](#音视频ffmpeg)
+  - [html parse](#html-parse)
+  - [身份验证](#身份验证)
+  - [img  GraphicsMagick 和 ImageMagick](#img--graphicsmagick-和-imagemagick)
 - [db存储类](#db存储类)
   - [mongodb   rds](#mongodb---rds)
+  - [comm db api ORM](#comm-db-api-orm)
+  - [search lunces](#search-lunces)
+- [debug](#debug)
+- [other](#other)
 
 <!-- /TOC -->
 # dsl类库
@@ -27,6 +40,8 @@ apache的commons和谷歌的guava库里面的多数功能
 4. 通用库 [Apache Commons 和 Guava]
 Java 开发人员可以使用一些优秀的通用第三方库，例如 Apache Commons 和 Google Guava。
 
+
+Lodash 通过消除处理数组、数字、对象、字符串等的麻烦，使 JavaScript 变得更容易。Lodash 的模块化方法非常适合：
 
 ## 集合增强库
 ## sql解析库
@@ -47,13 +62,65 @@ com.github.vincentrussell » sql-to-mongo-db-query-converter »https://mvnreposi
 翻译此页
 sql-to-mongo-db-query-converter helps you build quieres for MongoDb based on Queries provided in SQL. License, Apache 2.0. Tags ...
 
+## async library
+
+Async.Js
+ 
+# ui
+
+## jQuery
+
+## select2  mlt slt
+
+## table lst jq
+
+
 # 功能类
 
 ## http web
+
+
+Request
+ 
+## form mlt filr
+
+Multer
+Multer 是一种用于处理多部分数据和表单数据的 Node.Js 中间件，可用于上传文件。Multer 不会处理任何不是多部分的表格。
+
 ## 音视频ffmpeg
+
+## html parse 
+想在服务器端使用 jQuery 吗？现在您可以使用 Cheerio。Cheerio 是一个快速、灵活、精简的核心 jQuery，专为服务器设计。
+
+## 身份验证
+
+Passport 是 Node.js 开发人员的唯一身份验证模块
+
+## img  GraphicsMagick 和 ImageMagick 
 
 # db存储类
 ## mongodb   rds
+
+## comm db api ORM
+pdo 
+Sequelize
+Sequelize 用作 Postgres、显式 MariaDB、SQLite、MySQL 和基于 Microsoft SQL 的服务器的精确 Node.js ORM。它在支持方面无可挑剔的原因在于它具有可靠的事务支持、急切和延迟加载、关系、读取复制等功能。
+
+## search lunces
+# debug
+
+7. 嵌入式 SQL 数据库库 [H2、HSQL 和 Derby]
+我真的很喜欢像 H2 这样的内存数据库，你可以将它嵌入到你的 Java 应用程序中。它们非常适合测试 SQL 脚本
+
+18. JDBC 库故障排除
+有一些很好的 JDBC 扩展库，可以使调试更容易，比如 P6spy。
+
+JSHint
+JSHint 作为一种工具，可以轻松发现大量代码库中的更多错误。也就是说，开发人员不需要浪费时间调试。JSHint 用
+
+# other
+Browserify
+JavaScript 的库有时会面临管理它们的挑战。Browserify 允许开发人员发现在模板之间检查和检查与库和小部件关联的脚本很方便
 
 ref
 提升可读性方法 技术 lib.md

@@ -6,6 +6,36 @@
 
 
 	<dependencies>
+	
+	
+	<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+    <version>1.2.15</version>
+</dependency>
+
+
+
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.12.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/com.github.vincentrussell/sql-to-mongo-db-query-converter 
+
+<dependency>
+    <groupId>com.github.vincentrussell</groupId>
+    <artifactId>sql-to-mongo-db-query-converter</artifactId>
+    <version>1.21</version>
+</dependency>
+
+-->
+
 
 
 		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
@@ -35,14 +65,22 @@
 		-->
 		
 		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/example-jetty-embedded -->
+	<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.12.10</version>
+		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver -->
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver 
+		
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongodb-driver</artifactId>
-			<version>3.12.0</version>
+			<version>3.6.4</version>
 		</dependency>
+		
+		-->
+		
 
 
 	</dependencies>

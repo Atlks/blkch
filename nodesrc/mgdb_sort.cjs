@@ -10,16 +10,8 @@ var MongoClient33 = require("mongodb").MongoClient;
   MongoClient_conn = await MongoClient33.connect(url);
   const startIdx = 888888;
   var finish=startIdx + 8;
-  for (var i = startIdx; i++; i <finish ) {
-    if(i>finish) 
-    break;
-    myobj = { _id: i, nickname: "测试" + i,createTime:Date.now() };
-    try {
-      await MongoClient_conn.db("imapi").collection("userx").insertOne(myobj);
-    } catch (error) {
-      console.log(error);
-    }
-    console.log(myobj);
-  }
+ 
+      await MongoClient_conn.db("imapi").collection("userx").find();
+    
   MongoClient_conn.close();
 })();

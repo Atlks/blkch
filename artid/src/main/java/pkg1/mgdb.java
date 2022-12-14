@@ -5,8 +5,8 @@ package pkg1;
  
 
 	import com.mongodb.MongoClient;
-	import com.mongodb.client.MongoCollection;
-	import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 	import org.bson.Document;
 
 	public class mgdb {
@@ -17,7 +17,7 @@ package pkg1;
 	        // 连接到数据库
 	        MongoDatabase mongoDatabase = mongoClient.getDatabase("db7");
 
-	        mongoDatabase.createCollection("col1_tab1");
+	    //    mongoDatabase.createCollection("col1_tab1");
 
 
 

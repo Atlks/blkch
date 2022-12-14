@@ -7,9 +7,7 @@ server.port=8092
 ##开启https
 server.openHttps=false
 http.port=8092
-#server.ssl.key-store=classpath:imapi.p12
-#server.ssl.key-store-password=4bYKAC15
-#server.ssl.key-store-type=PKCS12
+ 
 
 
 #设置UTF-8格式

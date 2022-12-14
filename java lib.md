@@ -18,14 +18,18 @@ java lib
   - [form mlt filr](#form-mlt-filr)
   - [音视频ffmpeg](#音视频ffmpeg)
   - [html parse](#html-parse)
+  - [pdf office parse](#pdf-office-parse)
   - [身份验证](#身份验证)
   - [img  GraphicsMagick 和 ImageMagick](#img--graphicsmagick-和-imagemagick)
 - [db存储类](#db存储类)
   - [mongodb   rds](#mongodb---rds)
   - [comm db api ORM](#comm-db-api-orm)
   - [search lunces](#search-lunces)
+  - [Elasticsearch 是一种流行的全文搜索系统](#elasticsearch-是一种流行的全文搜索系统)
+  - [io library](#io-library)
 - [debug](#debug)
 - [other](#other)
+  - [OAuth 2.0](#oauth-20)
 
 <!-- /TOC -->
 # dsl类库
@@ -92,6 +96,8 @@ Multer 是一种用于处理多部分数据和表单数据的 Node.Js 中间件�
 ## html parse 
 想在服务器端使用 jQuery 吗？现在您可以使用 Cheerio。Cheerio 是一个快速、灵活、精简的核心 jQuery，专为服务器设计。
 
+## pdf office parse
+
 ## 身份验证
 
 Passport 是 Node.js 开发人员的唯一身份验证模块
@@ -107,6 +113,13 @@ Sequelize
 Sequelize 用作 Postgres、显式 MariaDB、SQLite、MySQL 和基于 Microsoft SQL 的服务器的精确 Node.js ORM。它在支持方面无可挑剔的原因在于它具有可靠的事务支持、急切和延迟加载、关系、读取复制等功能。
 
 ## search lunces
+
+## Elasticsearch 是一种流行的全文搜索系统
+，被全世界大多数PHP 开发人员广泛使用。它允许从存储在其数据库中的记录中快速搜索数据。该软件包是 Elasticsearch 的 PHP 客户端，它为 Elasticsearch 提供预配置设置，并为应用程序提供快速数据索引。它与所有 PHP 5+ 版本兼容，并提供详细的安装文档。
+
+## io library
+Symfony 文件系统组件
+这个文件系统库为文件系统提供了基本的实用程序。使用此库，开发人员只需几步即可轻松创建目录、文件等。它还允许您更改文件的编辑权限并使用它创建符号链接。要安装该库，您只需使用 composer 进行安装，这是一个非常简单的过程。
 # debug
 
 7. 嵌入式 SQL 数据库库 [H2、HSQL 和 Derby]
@@ -119,8 +132,12 @@ JSHint
 JSHint 作为一种工具，可以轻松发现大量代码库中的更多错误。也就是说，开发人员不需要浪费时间调试。JSHint 用
 
 # other
+
+## OAuth 2.0
 Browserify
 JavaScript 的库有时会面临管理它们的挑战。Browserify 允许开发人员发现在模板之间检查和检查与库和小部件关联的脚本很方便
+
+
 
 ref
 提升可读性方法 技术 lib.md

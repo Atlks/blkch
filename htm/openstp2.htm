@@ -1,0 +1,12 @@
+<button class="btn btn-primary" onclick="clk()">close and refresh opnner</button>
+
+<script type="text/javascript">
+
+    function clk() {
+      
+        window.close();//关闭当前窗口. 设置延迟关闭窗口.
+        alert( window.opener)
+        window.opener.location.reload();//刷新父窗口. 
+      
+    }
+</script>

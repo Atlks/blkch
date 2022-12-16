@@ -15,7 +15,7 @@ var MongoClient33 = require("mongodb").MongoClient;
     break;
     myobj = { _id: i, nickname: "测试" + i,createTime:Date.now() };
     try {
-      await MongoClient_conn.db("imapi").collection("userx").insertOne(myobj);
+      await MongoClient_conn.db("imapi").collection("user").insertOne(myobj);
     } catch (error) {
       console.log(error);
     }

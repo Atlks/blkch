@@ -2,12 +2,17 @@ doc sync 文档同步工具
 
 <!-- TOC -->
 
+- [stmap.cjs](#stmapcjs)
 - [github page+ site map links.](#github-page-site-map-links)
 - [gitbook](#gitbook)
 - [语雀不错的，程序员也可以爱上写文档](#语雀不错的程序员也可以爱上写文档)
 - [看云目前来看是国内最靠谱的选择，支持电子出版](#看云目前来看是国内最靠谱的选择支持电子出版)
 
 <!-- /TOC -->
+
+# stmap.cjs
+gene idx.html thro cjs... stmap looks
+
 eml pblc .gglblg n wordpres
 # github page+ site map links.
 例如：开源的 gitbook 就可以教你把一个个 Markdown 文件组织起来，弄成一本电子书。

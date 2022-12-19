@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.bson.Document;
@@ -15,20 +17,30 @@ import org.springframework.core.env.Profiles;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.FindIterable;
+import com.alibaba.druid.DbType;
+import com.alibaba.druid.sql.SQLUtils;
+import com.alibaba.druid.sql.ast.SQLStatement;
+import com.alibaba.druid.sql.dialect.mysql.visitor.MySqlSchemaStatVisitor;
+import com.alibaba.druid.stat.TableStat;
+import com.alibaba.druid.stat.TableStat.Condition;
+import com.alibaba.druid.stat.TableStat.Name;
+import com.alibaba.druid.util.JdbcConstants;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.IndexOptions;
 import com.mongodb.client.model.Indexes;
 import com.mongodb.util.JSON;
-import static pkg1.mgdbUtil.*;
-import uti.Util;
 
-public class mgdbUtil {
+import uti.Util;
+import uti.mgdbutil;
+
+public class mgdbSqlQuery2 {
 
 	public static void main(String[] args) {
 		
-		
+		 Document whr ;
+		 FindIterable<Document> rows;
 		
 //		// 构建MongoDB查询器
 //		MongoDBQuerier dataQuerier = new MongoDBQuerier();
@@ -43,62 +55,34 @@ public class mgdbUtil {
 		
 		
 		
-		// TODO Auto-generated method stub
-		String s = "mongodb://localhost:27017";
-		int idx = s.lastIndexOf(":");
-		System.out.println(s.substring(0, idx));
-		System.out.println(s.substring(idx + 1));
+      
+     
 
 		Properties e = getPropObjFrmSprbt();
 		MongoClient mongoClient = getMongoClient(e);
 
 		// -------------------连接到数据库 query
 		String db = e.getProperty("mongoconfig.dbName");
-		FindIterable<Document> documents = mongoClient.getDatabase(db).getCollection("user").find();
-
+		FindIterable<Document> documents = mongoClient.getDatabase(db).getCollection("user").find().limit(999);
+		documents=documents.limit(999);
 		// where query
-		Document whereQuery = new Document();
-		whereQuery.put("nickname", "88");
-		documents = mongoClient.getDatabase(db).getCollection("user").find(whereQuery);
+		 String sql="from imapi.user where _id=888";
+		 sql="from imapi.user where nickname='888' order by  creatTime desc";
+		 sql="from imapi.user where   _id=88 order by  creatTime desc";
+		 sql=" select nickname,_id from imapi.user where   _id=888 order by  creatTime desc limit 999";
+		
+		List list=mgdbutil.qryV2(sql,mongoClient,999);
+ 
+ 
 
-		// -------like query
-		Document regexQuery = whereLikeQueryCondt("nickname", "公众");
-
-		documents = mongoClient.getDatabase(db).getCollection("user").find(regexQuery);
-
-		for (Document document : documents) {
-			// System.out.println(document);
-			System.out.println(document.get("name"));
-			System.out.println(document.toJson());
-			// System.out.println(com.alibaba.fastjson.JSON.toJSON(e));
-		}
-
-		// System.out.println(collection);
-		System.out.println(com.alibaba.fastjson.JSON.toJSON(documents));
+		 System.out.println("  >>>>:");
+		System.out.println(com.alibaba.fastjson.JSON.toJSON(list));
 		Properties props = getPropObjFrmSprbt();
 
-		// query
-		String uid = "888";
-		String addids = "10000002,1100,10000";
-		String[] ids = addids.split(",");
-//		for (String add_id : ids) {
-//			Document d = new Document();
-//			d.put("userId", uid);
-//			d.put("toUserId", add_id);
-//			Document where =   new Document();
-//			where.put("_id", Integer.parseInt(add_id) );
-//			Document frd = mongoClient.getDatabase(db).getCollection("user")
-//					.find(where).first();
-//           System.out.println(frd);
-//			d.put("addFrd", frd);
-//			d.put("toNickname", frd.get("nickname"));
-//			mongoClient.getDatabase(db).getCollection("u_friends").insertOne(d);
-//
-//		}
+	 
+	//	consoleQueryFollow(888, 0, 0);
 
-		consoleQueryFollow(888, 0, 0);
-
-		addIndexUniq();
+	//	addIndexUniq();
 
 	}
 
@@ -163,7 +147,7 @@ public class mgdbUtil {
 		Properties props = new Properties();
 		try {
 			InputStreamReader inputStreamReader = new InputStreamReader(
-					mgdbUtil.class.getClassLoader().getResourceAsStream("application.properties"),
+					mgdbSqlQuery2.class.getClassLoader().getResourceAsStream("application.properties"),
 					StandardCharsets.UTF_8);
 			props.load(inputStreamReader);
 		} catch (IOException e1) {

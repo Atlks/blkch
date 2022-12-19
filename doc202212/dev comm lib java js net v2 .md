@@ -4,15 +4,25 @@ java lib
 <!-- TOC -->
 
 - [dsl类库](#dsl类库)
+  - [hutool vavr druid](#hutool-vavr-druid)
   - [api增强类 guava apache uti](#api增强类-guava-apache-uti)
   - [str增强库  apache guava](#str增强库--apache-guava)
+  - [通用库 \[Apache Commons 和 Guava\]](#通用库-apache-commons-和-guava)
+  - [Lodash (js)](#lodash-js)
+  - [.NET开源工具类库：Masuit.Tools](#net开源工具类库masuittools)
   - [集合增强库](#集合增强库)
-  - [sql解析库](#sql解析库)
-  - [async library](#async-library)
+  - [sql解析库 druid](#sql解析库-druid)
+  - [sync library](#sync-library)
+- [web](#web)
+  - [sprbt vtx spark](#sprbt-vtx-spark)
+  - [express(js)](#expressjs)
+  - [script runtime( js py php)](#script-runtime-js-py-php)
+  - [db commapi orm](#db-commapi-orm)
 - [ui](#ui)
   - [jQuery](#jquery)
   - [select2  mlt slt](#select2--mlt-slt)
   - [table lst jq](#table-lst-jq)
+  - [图表chart](#图表chart)
 - [功能类](#功能类)
   - [http web](#http-web)
   - [form mlt filr](#form-mlt-filr)
@@ -21,6 +31,11 @@ java lib
   - [pdf office parse](#pdf-office-parse)
   - [身份验证](#身份验证)
   - [img  GraphicsMagick 和 ImageMagick](#img--graphicsmagick-和-imagemagick)
+  - [nlp 分词](#nlp-分词)
+- [fun-network](#fun-network)
+  - [eml xampp mecury](#eml-xampp-mecury)
+  - [ftp svr ,filezilla(xampp)](#ftp-svr-filezillaxampp)
+  - [web3 eth tron](#web3-eth-tron)
 - [db存储类](#db存储类)
   - [mongodb   rds](#mongodb---rds)
   - [comm db api ORM](#comm-db-api-orm)
@@ -36,6 +51,8 @@ java lib
 <!-- /TOC -->
 # dsl类库
 
+## hutool vavr druid
+
 ## api增强类 guava apache uti
 
 MOQL-Transx是一个致力于减少开发者学习成本，用SQL语法检索各类数据库的开源项目。项目包括两个模块，moql-translator用于完成从MOQL(SQL92语法子集)到各类数据库DSL的翻译；moql-querier用于完成对各类数据库以SQL语言检索并获得二维结果的输出。由于MongoDB并没有一个完整意义上的DSL，故本文介绍的部分主要是使用moql-querier中的MongoDBQuerier类来完成对MongoDB的检索。如果有兴趣查看实现，也可以通过moql-translator中的MongoDBTranslator来了解其如何将SQL语法转换为了伪MongoDB DSL。(注:详见
@@ -43,14 +60,18 @@ MOQL-Transx是一个致力于减少开发者学习成本，用SQL语法检索各
 ## str增强库  apache guava
 apache的commons和谷歌的guava库里面的多数功能
 
-4. 通用库 [Apache Commons 和 Guava]
+##  通用库 [Apache Commons 和 Guava]
 Java 开发人员可以使用一些优秀的通用第三方库，例如 Apache Commons 和 Google Guava。
 
 
-Lodash 通过消除处理数组、数字、对象、字符串等的麻烦，使 JavaScript 变得更容易。Lodash 的模块化方法非常适合：
+## Lodash (js)
+ 通过消除处理数组、数字、对象、字符串等的麻烦，使 JavaScript 变得更容易。Lodash 的模块化方法非常适合：
+
+## .NET开源工具类库：Masuit.Tools
+ .NET Core项目中的核心工具类库也主要是引用了众多这个类库中的通用方法，很多骚操作
 
 ## 集合增强库
-## sql解析库
+## sql解析库 druid
 用来sql查询mgdb
 
 
@@ -68,9 +89,15 @@ com.github.vincentrussell » sql-to-mongo-db-query-converter »https://mvnreposi
 翻译此页
 sql-to-mongo-db-query-converter helps you build quieres for MongoDb based on Queries provided in SQL. License, Apache 2.0. Tags ...
 
-## async library
+## sync library
 
 Async.Js
+
+# web
+## sprbt vtx spark
+## express(js)
+## script runtime( js py php)
+## db commapi orm
  
 # ui
 
@@ -79,7 +106,7 @@ Async.Js
 ## select2  mlt slt
 
 ## table lst jq
-
+## 图表chart
 
 # 功能类
 
@@ -105,6 +132,14 @@ Multer 是一种用于处理多部分数据和表单数据的 Node.Js 中间件�
 Passport 是 Node.js 开发人员的唯一身份验证模块
 
 ## img  GraphicsMagick 和 ImageMagick 
+
+## nlp 分词
+
+# fun-network
+
+## eml xampp mecury  
+## ftp svr ,filezilla(xampp)
+## web3 eth tron
 
 # db存储类
 ## mongodb   rds

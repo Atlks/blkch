@@ -6,6 +6,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.bson.Document;
 
@@ -16,11 +18,12 @@ import com.alibaba.druid.sql.dialect.mysql.visitor.MySqlSchemaStatVisitor;
 import com.alibaba.druid.stat.TableStat.Column;
 import com.alibaba.druid.stat.TableStat.Condition;
 import com.alibaba.druid.util.JdbcConstants;
+import com.alibaba.fastjson.JSONObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.FindIterable;
-
+import static pkg1.mgdbUtil.*;
 import pkg1.mgdbUtil;
 
 public class mgdbutil {
@@ -227,6 +230,55 @@ public class mgdbutil {
 			}
 		}
 		return new Document();
+	}
+	
+	public static JSONObject toJsonObj_mu(Object document2, String flds) {
+		Document document= (Document) document2;
+		JSONObject jo=new JSONObject();
+		String[] a=flds.split(",");
+		for (String fld:a
+		) {
+			fld=fld.trim();
+			jo.put(fld, document.get(fld));
+		}
+
+
+
+		return jo;
+	}
+
+	public static List qryV2(String sql, MongoClient mongoClient,int limt) {
+		 
+		DbType dbType = JdbcConstants.MYSQL;
+		// 格式化输出
+		String result = SQLUtils.format(sql, JdbcConstants.MYSQL);
+		System.out.println(result); // 缺省大写格式
+		List<SQLStatement> stmtList = SQLUtils.parseStatements(sql, dbType);
+		SQLStatement stmt = stmtList.get(0);
+		MySqlSchemaStatVisitor visitor = new MySqlSchemaStatVisitor();
+		stmt.accept(visitor);
+		// 获取表名称
+		System.out.println("table names:");
+		 
+	 String selectCols=visitor.getColumns().stream().map(c->c.getName()) .collect(Collectors.joining(", "));
+	 System.out.println(selectCols);
+		
+		String db2 = visitor.getRepository().getDefaultSchemaName();
+		String table = visitor.getOriginalTables().get(0).getSimpleName();
+		Document whr = getWhr(visitor);
+		Document sort=getSortDoc(visitor.getOrderByColumns());
+		//int limt=999;
+	//	limt=visitor.getor
+	FindIterable<Document> qryrzt = mongoClient.getDatabase(db2).getCollection(table).find(whr).sort(sort).limit(limt);
+//	for (Document document : qryrzt) {
+//		 
+//		System.out.println(document.toJson());
+//		 
+//	}
+
+	return (List) StreamSupport.stream(qryrzt.map(d -> toJsonObj_mu(d, selectCols)).spliterator(), false).collect(Collectors.toList());
+
+	 
 	}
 
 }

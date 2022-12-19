@@ -69,7 +69,9 @@ public class mgdbSqlQuery {
 		 String sql="from imapi.user where _id=888";
 		 sql="from imapi.user where nickname='888' order by  creatTime desc";
 		 sql="from imapi.user where   _id=88 order by  creatTime desc";
-		 rows=mgdbutil.qry(sql,mongoClient);
+		 sql=" select nickname,_id from imapi.user where   _id=88 order by  creatTime desc limit 999";
+		
+		 rows=mgdbutil.qryV2(sql,mongoClient,999);
 //		  = mongoClient.getDatabase(db).getCollection("user").find(new Document() {{
 //			put("nickname", "888");
 //		}});

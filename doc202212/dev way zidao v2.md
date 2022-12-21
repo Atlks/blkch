@@ -22,6 +22,13 @@
   - [es tool](#es-tool)
 - [code exmp](#code-exmp)
   - [util](#util)
+- [debug tech n tool](#debug-tech-n-tool)
+  - [brower h5 dbgr](#brower-h5-dbgr)
+  - [dbg fun](#dbg-fun)
+  - [ui dbggr](#ui-dbggr)
+  - [ManagedSpy是一个诊断工具，类似于Spy++。](#managedspy是一个诊断工具类似于spy)
+  - [简单的方式调试   脚本](#简单的方式调试---脚本)
+  - [get\_defined\_vars() + debug\_backtrace()](#get_defined_vars--debug_backtrace)
 
 <!-- /TOC -->
 
@@ -91,3 +98,36 @@ JavaScript（ES6） Code Snippets 就是这样一款便利插件，它为开发�
 
 
 ## util 
+
+
+# debug tech n tool
+
+## brower h5 dbgr
+## dbg fun 
+
+## ui dbggr
+## ManagedSpy是一个诊断工具，类似于Spy++。
+
+ManagedSpy是一个诊断工具，类似于Spy++。
+
+tracetrace
+
+
+## 简单的方式调试   脚本 
+
+显示 PHP 错误和警告
+调试变量和函数
+将调试日志保存到数据库或文件中
+将调试数据发送到电子邮件地址
+
+ 
+
+    - [启用   错误报告 Errors、Warnings或Notices。](#启用---错误报告-errorswarnings或notices)
+- [脚本HTML 输出](#脚本html-输出)
+- [第 3 步：只为您自己启用 HTML 错误输出](#第-3-步只为您自己启用-html-错误输出)
+- [get\_defined\_vars() all val show](#get_defined_vars-all-val-show)
+- [功能调试：回溯 debug\_backtrace()的输出：](#功能调试回溯-debug_backtrace的输出)
+- [logfile](#logfile)
+
+
+## get_defined_vars() + debug_backtrace()

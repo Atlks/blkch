@@ -13,8 +13,11 @@ java lib
   - [集合增强库](#集合增强库)
   - [sql解析库 druid](#sql解析库-druid)
   - [sync library](#sync-library)
+  - [Java plexus-utils  lombok spring-expression](#java-plexus-utils--lombok-spring-expression)
+  - [script engieer](#script-engieer)
+  - [exec ,apache comm-cli](#exec-apache-comm-cli)
 - [web](#web)
-  - [sprbt vtx spark](#sprbt-vtx-spark)
+  - [sprbt  spark](#sprbt--spark)
   - [express(js)](#expressjs)
   - [script runtime( js py php)](#script-runtime-js-py-php)
   - [db commapi orm](#db-commapi-orm)
@@ -31,13 +34,17 @@ java lib
   - [pdf office parse](#pdf-office-parse)
   - [身份验证](#身份验证)
   - [img  GraphicsMagick 和 ImageMagick](#img--graphicsmagick-和-imagemagick)
-  - [nlp 分词](#nlp-分词)
+  - [nlp 分词 jsoup](#nlp-分词-jsoup)
 - [fun-network](#fun-network)
   - [eml xampp mecury](#eml-xampp-mecury)
   - [ftp svr ,filezilla(xampp)](#ftp-svr-filezillaxampp)
   - [web3 eth tron](#web3-eth-tron)
 - [db存储类](#db存储类)
+  - [couchdb driver ektorp](#couchdb-driver-ektorp)
+  - [emerd db pg sqlt mgdb](#emerd-db-pg-sqlt-mgdb)
   - [mongodb   rds](#mongodb---rds)
+  - [httpclient ftp ssh okio](#httpclient-ftp-ssh-okio)
+  - [webdriver mybatis](#webdriver-mybatis)
   - [comm db api ORM](#comm-db-api-orm)
   - [search lunces](#search-lunces)
   - [Elasticsearch 是一种流行的全文搜索系统](#elasticsearch-是一种流行的全文搜索系统)
@@ -90,11 +97,17 @@ com.github.vincentrussell » sql-to-mongo-db-query-converter »https://mvnreposi
 sql-to-mongo-db-query-converter helps you build quieres for MongoDb based on Queries provided in SQL. License, Apache 2.0. Tags ...
 
 ## sync library
-
 Async.Js
+## Java plexus-utils  lombok spring-expression
+
+## script engieer
+
+## exec ,apache comm-cli
 
 # web
-## sprbt vtx spark
+## sprbt  spark
+
+vtx 很罗嗦
 ## express(js)
 ## script runtime( js py php)
 ## db commapi orm
@@ -133,7 +146,7 @@ Passport 是 Node.js 开发人员的唯一身份验证模块
 
 ## img  GraphicsMagick 和 ImageMagick 
 
-## nlp 分词
+## nlp 分词 jsoup
 
 # fun-network
 
@@ -142,7 +155,16 @@ Passport 是 Node.js 开发人员的唯一身份验证模块
 ## web3 eth tron
 
 # db存储类
+
+##  couchdb driver ektorp
+
+## emerd db pg sqlt mgdb
+ couchdb driver
 ## mongodb   rds
+
+## httpclient ftp ssh okio 
+
+## webdriver mybatis
 
 ## comm db api ORM
 pdo 

@@ -1,9 +1,27 @@
-﻿Music
+﻿
+<!-- TOC -->
 
+- [simple lan lib frm db](#simple-lan-lib-frm-db)
+- [直连先实现功能，在安全](#直连先实现功能在安全)
+- [smp db api layer.](#smp-db-api-layer)
+- [db also as lib ,db svr](#db-also-as-lib-db-svr)
+- [iteg lib and cli exe](#iteg-lib-and-cli-exe)
 
+<!-- /TOC -->
 
+# simple lan lib frm db
+ndjs http mgdb
 
+# 直连先实现功能，在安全
+client+db mode.. no backend svr api..db just as api
 
+# smp db api layer.
+rest db driver.. no need username pwd..
+
+# db also as lib ,db svr
+
+# iteg lib and cli exe
+Music
 • Alpine（电子邮件客户端）
 • cmus（媒体播放器）
 • Irssi（IRC客户端）

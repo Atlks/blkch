@@ -12,6 +12,7 @@ seo
   - [URL file path 优化 url as keyword](#url-file-path-优化-url-as-keyword)
   - [面包屑导航](#面包屑导航)
   - [矩阵引流 多个site互相引流](#矩阵引流-多个site互相引流)
+  - [使用markdown格式 减少语法噪音](#使用markdown格式-减少语法噪音)
 - [设计技术](#设计技术)
   - [toc目录idx](#toc目录idx)
   - [nlp 内容缩略 snownlp](#nlp-内容缩略-snownlp)
@@ -49,6 +50,8 @@ SEO禅从建站开始，就没有使用keyword的meta标签，只给网站加了
 谷歌Google Search Console面板，还专门有一项是标识统计网站有面包屑导航的页面数，说明谷歌对于网站是否有面包屑导航功能还是比较重视的，SEO需要做的就是迎合搜索引擎和用户的喜好，不断优化网站。
 
 ## 矩阵引流 多个site互相引流
+
+## 使用markdown格式 减少语法噪音
 
 # 设计技术
 ## toc目录idx

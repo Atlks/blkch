@@ -7,3 +7,7 @@ Firebird是一个跨平台的关系数据库系统，目前能够运行在Window
 支持事务的多个版本功能，
 使用PSQL(Procedure SQL),你可以创建强大的存储过程来处理服务上的所有数据，你可以使用select Stored Procedure的形式，使用存储过程，以得到一个虚拟的表结构的结果。这样的话，你就可以很容易的在报表中使用它。
 存储过程和触发器可以引发事件，这个事件可以被客户端程序监听到
+
+embd mgdb
+Couchbase Lite
+lowdb

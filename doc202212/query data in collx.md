@@ -1,0 +1,26 @@
+
+
+<!-- TOC -->
+
+- [传统的循环加条件判断](#传统的循环加条件判断)
+- [Find和FindAll方法。](#find和findall方法)
+- [java stream api](#java-stream-api)
+
+<!-- /TOC -->
+use json db
+ library  collection
+
+## 传统的循环加条件判断
+ 在一个集合中查找满足指定条件的数据，是一件很容易的事，应用也很广泛。实现方法，即可以用传统的循环加条件判断，也可以直接调用.Net自身提供的Find和FindAll方法。
+
+## Find和FindAll方法。
+##  java stream api
+
+ 事实上，.Net还提供了Exists(检查满足指定条件的数据是否存在)、FindIndex(搜索与指定条件相匹配的数据在集合中的索引)等诸多以泛型Predicate为参数的方法，其用法同上面的FindAll类似。在编写程序时，尽量考虑用.Net提供的方法实现，在程序编写速度、维护
+
+ ● 数据排序
+
+.Net中集合的排序有两种方式，常用的方法是利用DataTable来排序，模拟Sql中的Order By实现。这里要说的是对数组或泛型List进行排序，实现思路是用.Net集合中的Sort方法，通过类内部实现IComparable排序接口，或以实现IComparer接口的类为参数的方式实现排序。
+
+定义排序类，并继承IComparer接口，实现Compare方法。 
+

@@ -1,6 +1,7 @@
 ﻿
 <!-- TOC -->
 
+- [tmplt engr](#tmplt-engr)
 - [simple lan lib frm db](#simple-lan-lib-frm-db)
 - [直连先实现功能，在安全](#直连先实现功能在安全)
 - [smp db api layer.](#smp-db-api-layer)
@@ -8,6 +9,12 @@
 - [iteg lib and cli exe](#iteg-lib-and-cli-exe)
 
 <!-- /TOC -->
+
+# tmplt engr
+php jade jsp 
+服务端js
+<js src="/data?c=11">
+$.get("/data?c=11")
 
 # simple lan lib frm db
 ndjs http mgdb

@@ -1,3 +1,5 @@
+
+
 <meta charset="utf8">
 <!-- 
   // src="bundle_mmnc2add.jsx" src="bundle_mmnc2add.jsx"
@@ -269,6 +271,8 @@
  }
  
  </script>
+
+ <!--    ....-->
 <script>
   (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
@@ -95067,7 +95071,7 @@ const mnemonic = " glare pave fatal catch cake large mad exit any hood expose ne
 //bip39.generateMnemonic(128,null,bip39.wordlists.chiness_simplified)console.log('助记词' + mnemonic);
 
 //通过随机助记词生成公私钥、地址
-async function getAdress(mnemonic) {
+  function getAdress(mnemonic) {
     
     hdwallet= HDWallet.fromMnemonic(mnemonic.trim())
  //   const hdwallet = HDWallet.fromSeed(seed)//通过seed获取hdWallet    
@@ -95077,7 +95081,8 @@ async function getAdress(mnemonic) {
     console.log("PublicKey = " + key.getPublicKey().toString('hex'))//公钥    
       EthAddress = '0x' + key.getAddress().toString('hex')//地址    
     console.log("Eth Address = " + EthAddress)
-    addTxtCtrl.value=(EthAddress);
+    return EthAddress;
+  //  addTxtCtrl.value=(EthAddress);
 }
 
 //通过同一个seed获取多个地址
@@ -95098,6 +95103,7 @@ async function getAdressFromSameSeed(mnemonic) {
 window.mmnc2ad=getAdress;
  //getAdressFromSameSeed(mnemonic)
 
+
 /**
  * 
  * 
@@ -95108,6 +95114,11 @@ nodesrc/mmnc2add2.js:18
 PublicKey = f63e72a94928d26c7e81c538a409330dd4f548cd72dc9027fc87fc35a6ce3ea58c3f5049734146dd3da9f0daadc072fd58b9c4cfcea3a87f12e1f577d5a44057
 nodesrc/mmnc2add2.js:19
 Eth Address = 0x3584c87eb1ce571faef0c56b38a24b18d817214c
+
+
+glare pave fatal catch cake large mad exit any hood expose neither  
+0x3a5c0fe05f7515a8283b1d2a1a241cbabafbf094
+
  */
 
 
@@ -95117,24 +95128,23 @@ Eth Address = 0x3584c87eb1ce571faef0c56b38a24b18d817214c
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <utf8></utf8>
 <meta charset="utf8">
-mmnc:<br>
 
-<textarea id="w3review" name="w3review" rows="8" cols="50">
-    glare pave fatal catch cake large mad exit any hood expose neither  
- </textarea
->
-<p></p>
-<button type="button" onclick="clk()">生成地址</button><p></p>
+
+
 <script>
-  function clk() {
-    mnemonic = " ";
-    mmnc2ad(w3review.value);
-  }
+    //生成英文助记词
+    mnemonic = generateMnemonic();  
+  // const mnemonic = bip39.generateMnemonic(128, null, bip39.wordlists.chinese_simplified); //生成中文助记词
+  
+  //  document.write(mnemonic+"<p>");
+  //   document.write(generateMnemonic_ivei(mnemonic));
+  document.write( generateMnemonic_left(generateMnemonic(),7));
+  document.write(' school ')
+  document.write( generateMnemonic_left(generateMnemonic(),7)+' harsh ' +  generateMnemonic_ivei(mnemonic)+"  "+ generateMnemonic_left(generateMnemonic(),7)); //生成助记词
+  document.write(' <p> ');
 
-  //mmnc2ad(mnemonic)
-</script>
+   // document.write((mnemonic));  document.write(' <p> ');
+    document.write(mmnc2ad(mnemonic))
 
-<textarea id="addTxtCtrl" name="addTxtCtrl" rows="8" cols="50">
- 
-</textarea
->
+  </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
